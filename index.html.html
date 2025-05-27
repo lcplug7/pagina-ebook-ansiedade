@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Calma, Vida Plena | Transforme Ansiedade em Equilíbrio em 21 Dias</title>
+    <style>
+        /* Estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1a6985 0%, #2a9d8f 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        /* Seção Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #333;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Seção Problema */
+        .problem {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #2a9d8f;
+            margin: 0 auto;
+        }
+        
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .problem-icon {
+            background-color: #ffe8e8;
+            color: #ff6b6b;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .problem-text h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ff6b6b;
+        }
+        
+        /* Seção Solução */
+        .solution {
+            padding: 80px 0;
+            background-color: #f1f9f9;
+        }
+        
+        .solution-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .solution-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .solution-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .solution-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .solution-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2a9d8f;
+        }
+        
+        .solution-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .solution-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            color: #2a9d8f;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        /* Seção Benefícios */
+        .benefits {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        /* Seção Depoimentos */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f1f9f9;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 60px;
+            color: #f1f9f9;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            padding-left: 40px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        /* Seção Garantia */
+        .guarantee {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .guarantee-icon {
+            font-size: 60px;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .guarantee-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        /* Seção Preço */
+        .pricing {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a6985 0%, #2a9d8f 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing .section-title:after {
+            background-color: white;
+        }
+        
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            color: #333;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-header {
+            margin-bottom: 30px;
+        }
+        
+        .pricing-header h3 {
+            font-size: 28px;
+            color: #2a9d8f;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-header p {
+            font-size: 16px;
+            color: #777;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+        
+        .price-original {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .pricing-features {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-feature-icon {
+            color: #2a9d8f;
+            margin-right: 10px;
+        }
+        
+        .pricing-cta {
+            margin-top: 30px;
+        }
+        
+        .pricing-cta .btn {
+            width: 100%;
+        }
+        
+        /* Seção FAQ */
+        .faq {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* Seção CTA Final */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        /* Elementos de urgência */
+        .urgency-bar {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .countdown {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+        
+        .limited-offer {
+            background-color: #ffe8e8;
+            border: 2px dashed #ff6b6b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .limited-offer h4 {
+            color: #ff6b6b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .solution-content {
+                flex-direction: column;
+            }
+            
+            .solution-image {
+                order: 1;
+            }
+            
+            .solution-text {
+                order: 2;
+            }
+            
+            .price {
+                font-size: 36px;
+            }
+        }
+        
+        /* Animações */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Ícones */
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de urgência -->
+    <div class="urgency-bar">
+        OFERTA ESPECIAL: As 50 primeiras pessoas ganham acesso ao grupo VIP de suporte! Restam apenas <span class="countdown">27</span> vagas!
+    </div>
+    
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">Mente Calma</div>
+        </div>
+    </header>
+    
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transforme Sua Ansiedade em Equilíbrio Emocional em Apenas 21 Dias</h1>
+            <p>Descubra o método comprovado que já ajudou centenas de pessoas a reduzir crises de ansiedade em até 70% e recuperar o controle sobre seus pensamentos e emoções.</p>
+            <a href="#pricing" class="btn pulse">QUERO TRANSFORMAR MINHA ANSIEDADE EM EQUILÍBRIO</a>
+            <p style="margin-top: 20px; font-size: 16px;">Ou role para baixo para descobrir como</p>
+        </div>
+    </section>
+    
+    <!-- Seção Problema -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="section-title">
+                <h2>Você Se Identifica Com Algum Destes Sintomas?</h2>
+            </div>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="problem-icon">❗</div>
+                    <div class="problem-text">
+                        <h3>Coração Acelerado Sem Motivo</h3>
+                        <p>Você já sentiu seu coração disparar de repente, mesmo quando não há nenhum perigo real? Esta sensação de pânico pode surgir nos momentos mais inesperados, tornando difícil manter a calma.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❗</div>
+                    <div class="problem-text">
+                        <h3>Pensamentos Incontroláveis à Noite</h3>
+                        <p>Você se deita para dormir, mas sua mente começa a correr com preocupações, medos e cenários negativos que parecem impossíveis de parar, roubando seu sono e sua paz.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❗</div>
+                    <div class="problem-text">
+                        <h3>Tensão Constante no Corpo</h3>
+                        <p>Dores de cabeça, tensão nos ombros, mandíbula apertada, problemas digestivos... Seu corpo está constantemente em estado de alerta, como se estivesse sempre se preparando para uma ameaça.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❗</div>
+                    <div class="problem-text">
+                        <h3>Evitando Situações Sociais</h3>
+                        <p>Você já cancelou planos porque a ansiedade não te deixou sair de casa? A ideia de estar em ambientes sociais ou enfrentar certas situações provoca um medo desproporcional.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❗</div>
+                    <div class="problem-text">
+                        <h3>Sensação de Que Algo Terrível Vai Acontecer</h3>
+                        <p>Mesmo quando tudo está bem, você sente uma apreensão constante, como se estivesse esperando que algo desse errado a qualquer momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Solução -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="section-title">
+                <h2>A Solução: Um Método Comprovado de 21 Dias</h2>
+            </div>
+            <div class="solution-content">
+                <div class="solution-image">
+                    <img src="/home/ubuntu/produto_digital/criativos/capa_ebook_final_corrigida.png" alt="Ebook Mente Calma, Vida Plena">
+                </div>
+                <div class="solution-text">
+                    <h3>Mente Calma, Vida Plena</h3>
+                    <p>Depois de anos lutando contra minha própria ansiedade e estudando as mais eficazes técnicas baseadas em evidências científicas, desenvolvi um método que transformou não apenas a minha vida, mas a de centenas de pessoas.</p>
+                    <p>Este não é apenas mais um ebook sobre ansiedade. É um programa estruturado de 21 dias que combina técnicas de mindfulness, terapia cognitivo-comportamental, práticas somáticas e estratégias nutricionais em uma abordagem holística e prática.</p>
+                    <div class="solution-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <p>Técnicas simples que podem ser aplicadas em apenas 15-20 minutos por dia</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <p>Resultados visíveis já na primeira semana de prática</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <p>Método baseado em ciência e comprovado por centenas de usuários</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <p>Abordagem passo a passo que qualquer pessoa pode seguir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Benefícios -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Que Você Vai Conquistar em 21 Dias</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">😴</div>
+                    <h3>Sono Reparador</h3>
+                    <p>Aprenda técnicas específicas para acalmar a mente antes de dormir e desfrute de noites tranquilas e manhãs revigorantes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Clareza Mental</h3>
+                    <p>Elimine a névoa mental causada pela ansiedade e recupere sua capacidade de concentração e tomada de decisões.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">❤️</div>
+                    <h3>Equilíbrio Emocional</h3>
+                    <p>Desenvolva a habilidade de observar suas emoções sem ser dominado por elas, respondendo em vez de reagir às situações.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Relacionamentos Melhores</h3>
+                    <p>Ao reduzir sua ansiedade, você estará mais presente e disponível para conexões genuínas com as pessoas que ama.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Resiliência ao Estresse</h3>
+                    <p>Desenvolva ferramentas práticas para enfrentar situações desafiadoras sem ser dominado pela ansiedade.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>Crescimento Pessoal</h3>
+                    <p>Transforme sua relação com a ansiedade e descubra como ela pode se tornar um catalisador para seu desenvolvimento pessoal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Depoimentos -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Que Dizem As Pessoas Que Já Transformaram Sua Ansiedade</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>Depois de anos tomando medicamentos para ansiedade, encontrei neste método uma forma natural de gerenciar meus sintomas. Na primeira semana já notei diferença na qualidade do meu sono, e após os 21 dias completos, reduzi minhas crises de pânico em mais de 80%.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Mariana S.</h4>
+                            <p>Professora, 34 anos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>Eu era cético no início, mas decidi tentar como último recurso antes de buscar medicação. As técnicas são simples, mas incrivelmente poderosas. Minha ansiedade social diminuiu drasticamente e agora consigo participar de reuniões e eventos sem aquele medo paralisante.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Carlos M.</h4>
+                            <p>Engenheiro, 29 anos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>Como mãe de três filhos, minha ansiedade estava afetando toda a família. Este método me deu ferramentas práticas que consegui incorporar na minha rotina agitada. O resultado foi transformador não só para mim, mas para toda a dinâmica familiar.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Patrícia L.</h4>
+                            <p>Empreendedora, 42 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Garantia -->
+    <section class="guarantee" id="guarantee">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-icon">🛡️</div>
+                <h3>Garantia Incondicional de 7 Dias</h3>
+                <p>Tenho tanta confiança no poder transformador deste método que ofereço uma garantia incondicional: se em 7 dias você não perceber nenhuma melhora nos seus níveis de ansiedade, basta enviar um e-mail solicitando reembolso e devolveremos 100% do seu investimento, sem perguntas.</p>
+                <p>Você não tem nada a perder, apenas uma vida mais calma e plena para ganhar.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Preço -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Invista Hoje na Sua Paz Mental</h2>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Mente Calma, Vida Plena</h3>
+                    <p>O método de 21 dias para transformar ansiedade em equilíbrio</p>
+                </div>
+                <div class="price">
+                    <span class="price-original">R$197</span>
+                    R$67
+                </div>
+                <p>Pagamento único - Sem mensalidades</p>
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <div class="pricing-feature-icon">✓</div>
+                        <p>Ebook completo com o método de 21 dias</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <div class="pricing-feature-icon">✓</div>
+                        <p>30 páginas de conteúdo complementar exclusivo</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <div class="pricing-feature-icon">✓</div>
+                        <p>Técnicas de respiração e meditação guiada</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <div class="pricing-feature-icon">✓</div>
+                        <p>Exercícios práticos para cada dia do programa</p>
+                    </div>
+                    <div class="pricing-feature">
+                        <div class="pricing-feature-icon">✓</div>
+                        <p>Diário de acompanhamento para registrar seu progresso</p>
+                    </div>
+                </div>
+                <div class="limited-offer">
+                    <h4>BÔNUS EXCLUSIVO</h4>
+                    <p>As primeiras 50 pessoas ganham acesso ao grupo VIP de suporte por WhatsApp!</p>
+                </div>
+                <div class="pricing-cta">
+                    <a href="https://pay.kiwify.com.br/seu-link-aqui" class="btn pulse">QUERO TRANSFORMAR MINHA ANSIEDADE AGORA</a>
+                </div>
+                <p style="margin-top: 20px; font-size: 14px;">Pagamento 100% seguro via Kiwify</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Este método substitui terapia ou medicamentos?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não. O método "Mente Calma, Vida Plena" é um complemento valioso para tratamentos convencionais, mas não substitui acompanhamento médico ou psicológico. Se você está em tratamento, continue seguindo as orientações do seu profissional de saúde e use este método como um recurso adicional.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quanto tempo preciso dedicar por dia?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O programa foi desenhado para pessoas ocupadas. Você precisará de apenas 15-20 minutos por dia para realizar as práticas. Algumas técnicas podem ser incorporadas na sua rotina diária, sem exigir tempo adicional.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Em quanto tempo verei resultados?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A maioria das pessoas percebe melhorias na qualidade do sono e nos níveis de tensão corporal já na primeira semana. Até o final dos 21 dias, você terá desenvolvido habilidades que transformarão sua relação com a ansiedade a longo prazo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como recebo o ebook após a compra?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do ebook em formato PDF. Você poderá ler em qualquer dispositivo: computador, tablet ou smartphone.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>E se eu não gostar do conteúdo?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oferecemos garantia incondicional de 7 dias. Se você não ficar satisfeito por qualquer motivo, basta enviar um e-mail solicitando reembolso e devolveremos 100% do seu investimento, sem questionamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Está Na Hora de Viver Sem o Peso da Ansiedade</h2>
+            <p>Imagine como seria acordar todas as manhãs sentindo-se descansado, enfrentar desafios com calma e clareza, e desfrutar plenamente dos momentos com as pessoas que você ama, sem a sombra constante da ansiedade.</p>
+            <p>Este não é apenas um sonho distante. É uma possibilidade real que está ao seu alcance em apenas 21 dias.</p>
+            <a href="#pricing" class="btn pulse">QUERO TRANSFORMAR MINHA ANSIEDADE EM EQUILÍBRIO</a>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Mente Calma. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Contador regressivo
+        let count = 27;
+        const countdown = document.querySelector('.countdown');
+        
+        setInterval(() => {
+            if (count > 1) {
+                count--;
+                countdown.textContent = count;
+            }
+        }, 10000);
+        
+        // FAQ Toggle
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                answer.style.display = isOpen ? 'none' : 'block';
+                question.querySelector('span:last-child').textContent = isOpen ? '+' : '-';
+            });
+        });
+        
+        // Inicialmente esconder todas as respostas
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
